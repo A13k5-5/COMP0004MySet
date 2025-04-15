@@ -51,9 +51,9 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
     return this.union(mySet, MAX_SIZE);
   }
 
-  public MySet<T> union(MySet<T> mySet, int mazSize) throws MySetException
+  public MySet<T> union(MySet<T> mySet, int maxSize) throws MySetException
   {
-    MySet<T> result = MySetFactory.getInstance().getMySet(mazSize);
+    MySet<T> result = MySetFactory.getInstance().getMySet(maxSize);
     for (T value : this) result.add(value);
     for (T value : mySet) result.add(value);
     return result;
