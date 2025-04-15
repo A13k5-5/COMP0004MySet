@@ -91,4 +91,8 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
        throw new MySetException("Trying to create a set with size greater than maximum allowed.");
      }
   }
+
+  public String toString() {
+    return "";
+  }
 }
