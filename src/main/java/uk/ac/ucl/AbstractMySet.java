@@ -16,9 +16,8 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
   public boolean equals(MySet<T> aSet)
   {
     if (this.size() != aSet.size()) return false;
-    for (T t : this) {
+    for (T t : this)
       if (!aSet.contains(t)) return false;
-    }
     return true;
   }
 
@@ -32,18 +31,14 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
   {
     List<T> result = new ArrayList<>();
     for (T value : this)
-    {
       result.add(value);
-    }
     return result;
   }
 
   public void addAll(T... values) throws MySetException
   {
     for (T value : values)
-    {
       add(value);
-    }
   }
 
   public MySet<T> union(MySet<T> mySet) throws MySetException
@@ -68,12 +63,8 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
   {
     MySet<T> result = MySetFactory.getInstance().getMySet(maxSize);
     for(T value : this)
-    {
       if (mySet.contains(value))
-      {
         result.add(value);
-      }
-    }
     return result;
   }
 
@@ -86,12 +77,8 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
   {
     MySet<T> result = MySetFactory.getInstance().getMySet(maxSize);
     for (T value : this)
-    {
       if (!mySet.contains(value))
-      {
         result.add(value);
-      }
-    }
 
     return result;
   }
