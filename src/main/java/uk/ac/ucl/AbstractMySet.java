@@ -2,6 +2,7 @@ package uk.ac.ucl;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 /**
  * This class implements methods common to all concrete set implementations but does not
@@ -93,6 +94,6 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
   }
 
   public String toString() {
-    return "";
+      return this.toList().stream().map(Object::toString).collect(Collectors.joining(", "));
   }
 }
