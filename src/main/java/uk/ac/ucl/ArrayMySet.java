@@ -33,11 +33,9 @@ public class ArrayMySet<T extends Comparable<T>> extends AbstractMySet<T>
 
   public void add(T value) throws MySetException
   {
-    if (!contents.contains(value))
-    {
-      checkForSpace();
-      contents.add(value);
-    }
+    if (contents.contains(value)) return;
+    checkForSpace();
+    contents.add(value);
   }
 
   private void checkForSpace() throws MySetException
@@ -51,12 +49,8 @@ public class ArrayMySet<T extends Comparable<T>> extends AbstractMySet<T>
   public boolean contains(T value)
   {
     for (T setValue : contents)
-    {
       if (setValue.compareTo(value) == 0)
-      {
         return true;
-      }
-    }
     return false;
   }
 
