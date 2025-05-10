@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LinkedListAddMultipleElements {
+public class LinkedListAddMultipleElementsTest {
     LinkedList<Integer> LL;
     java.util.LinkedList<Integer> LL2;
     @BeforeEach
